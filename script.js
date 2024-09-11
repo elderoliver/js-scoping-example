@@ -109,9 +109,17 @@ const jessica = {
   family: ['Cris', 'Jonh'],
 };
 
+// This is not a good idea to copy a object
+// Because it mainten the same memory address for
+// both variables in the memory heap.
 const marriedJessica = jessica;
 //marriedJessica.lastName = 'Davis';
 
+// Using this function it's a way better to copy
+// an object, but the only problem is this function
+// just create a new copy on the first level.
+// for example if I have a array as a attribute
+// it will be the same for both objects.
 const jessicaCopy = Object.assign({}, jessica);
 jessicaCopy.lastName = 'Davis';
 jessicaCopy.family.push('Steven');
