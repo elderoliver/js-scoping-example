@@ -25,9 +25,9 @@ const firstName = 'elder';
 
 calcAge(1990);*/
 
-// How to use the this keyword
+// *** How to use the this keyword ***
 
-console.log(this);
+/*console.log(this);
 
 // On This example when we declare a regular function
 // the this keyword is undefined
@@ -93,3 +93,28 @@ var name = 'Bla bla bla';
 console.log(elder2.greet());
 
 elder2.calcAge();
+
+*/
+
+let lastName = 'Oliveira';
+let oldLastName = lastName;
+lastName = 'Castro';
+
+console.log(lastName, oldLastName);
+
+const jessica = {
+  firstName: 'Jessica',
+  lastName: 'Willians',
+  age: 27,
+  family: ['Cris', 'Jonh'],
+};
+
+const marriedJessica = jessica;
+//marriedJessica.lastName = 'Davis';
+
+const jessicaCopy = Object.assign({}, jessica);
+jessicaCopy.lastName = 'Davis';
+jessicaCopy.family.push('Steven');
+jessicaCopy.family.push('Ben');
+
+console.log(jessica, jessicaCopy);
